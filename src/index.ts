@@ -1,9 +1,14 @@
 class Telefone {
-    constructor(
-        private _ddd: string,
-        private _numero: number,
-        private _tipo: string
-    ) { }
+    private _ddd: string;
+    private _numero: number;
+    private _tipo: string;
+
+    constructor(ddd: string, numero: number, tipo: string) {
+        this._ddd = ddd;
+        this._numero = numero;
+        this._tipo = tipo;
+    }
+
     get ddd(): string {
         return this._ddd;
     }
@@ -23,13 +28,20 @@ class Telefone {
         this._tipo = value;
     }
 }
+
 class Endereco {
-    constructor(
-        private _rua: string,
-        private _numero: number,
-        private _cidade: string,
-        private _estado: string
-    ) { }
+    private _rua: string;
+    private _numero: number;
+    private _cidade: string;
+    private _estado: string;
+
+    constructor(rua: string, numero: number, cidade: string, estado: string) {
+        this._rua = rua;
+        this._numero = numero;
+        this._cidade = cidade;
+        this._estado = estado;
+    }
+
     get rua(): string {
         return this._rua;
     }
@@ -55,15 +67,31 @@ class Endereco {
         this._estado = value;
     }
 }
+
 class Cliente {
+    private _nome: string;
+    private _cpf: number;
+    private _datanasc: number;
+    private _sexo?: string;
+    private _endereco?: Endereco;
+    private _telefone?: Telefone;
+
     constructor(
-        private _nome: string,
-        private _cpf: number,
-        private _datanasc: number,
-        private _sexo?: string,
-        private _endereco?: Endereco,
-        private _telefone?: Telefone
-    ) { }
+        nome: string,
+        cpf: number,
+        datanasc: number,
+        sexo?: string,
+        endereco?: Endereco,
+        telefone?: Telefone
+    ) {
+        this._nome = nome;
+        this._cpf = cpf;
+        this._datanasc = datanasc;
+        this._sexo = sexo;
+        this._endereco = endereco;
+        this._telefone = telefone;
+    }
+
     get nome(): string {
         return this._nome;
     }
@@ -103,11 +131,16 @@ class Cliente {
 }
 
 class Produto {
-    constructor(
-        private _codigo: number,
-        private _descricao: string,
-        private _valor: number
-    ) { }
+    private _codigo: number;
+    private _descricao: string;
+    private _valor: number;
+
+    constructor(codigo: number, descricao: string, valor: number) {
+        this._codigo = codigo;
+        this._descricao = descricao;
+        this._valor = valor;
+    }
+
     get codigo(): number {
         return this._codigo;
     }
@@ -127,13 +160,20 @@ class Produto {
         this._valor = value;
     }
 }
+
 class Venda {
-    constructor(
-        private _codigo: number,
-        private _data: number,
-        private _cliente: Cliente,
-        private _produto: Produto
-    ) { }
+    private _codigo: number;
+    private _data: number;
+    private _cliente: Cliente;
+    private _produto: Produto;
+
+    constructor(codigo: number, data: number, cliente: Cliente, produto: Produto) {
+        this._codigo = codigo;
+        this._data = data;
+        this._cliente = cliente;
+        this._produto = produto;
+    }
+
     get codigo(): number {
         return this._codigo;
     }

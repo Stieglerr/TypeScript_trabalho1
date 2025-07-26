@@ -1,9 +1,9 @@
 "use strict";
 class Telefone {
-    constructor(_ddd, _numero, _tipo) {
-        this._ddd = _ddd;
-        this._numero = _numero;
-        this._tipo = _tipo;
+    constructor(ddd, numero, tipo) {
+        this._ddd = ddd;
+        this._numero = numero;
+        this._tipo = tipo;
     }
     get ddd() {
         return this._ddd;
@@ -25,11 +25,11 @@ class Telefone {
     }
 }
 class Endereco {
-    constructor(_rua, _numero, _cidade, _estado) {
-        this._rua = _rua;
-        this._numero = _numero;
-        this._cidade = _cidade;
-        this._estado = _estado;
+    constructor(rua, numero, cidade, estado) {
+        this._rua = rua;
+        this._numero = numero;
+        this._cidade = cidade;
+        this._estado = estado;
     }
     get rua() {
         return this._rua;
@@ -57,13 +57,13 @@ class Endereco {
     }
 }
 class Cliente {
-    constructor(_nome, _cpf, _datanasc, _sexo, _endereco, _telefone) {
-        this._nome = _nome;
-        this._cpf = _cpf;
-        this._datanasc = _datanasc;
-        this._sexo = _sexo;
-        this._endereco = _endereco;
-        this._telefone = _telefone;
+    constructor(nome, cpf, datanasc, sexo, endereco, telefone) {
+        this._nome = nome;
+        this._cpf = cpf;
+        this._datanasc = datanasc;
+        this._sexo = sexo;
+        this._endereco = endereco;
+        this._telefone = telefone;
     }
     get nome() {
         return this._nome;
@@ -103,10 +103,10 @@ class Cliente {
     }
 }
 class Produto {
-    constructor(_codigo, _descricao, _valor) {
-        this._codigo = _codigo;
-        this._descricao = _descricao;
-        this._valor = _valor;
+    constructor(codigo, descricao, valor) {
+        this._codigo = codigo;
+        this._descricao = descricao;
+        this._valor = valor;
     }
     get codigo() {
         return this._codigo;
@@ -128,11 +128,11 @@ class Produto {
     }
 }
 class Venda {
-    constructor(_codigo, _data, _cliente, _produto) {
-        this._codigo = _codigo;
-        this._data = _data;
-        this._cliente = _cliente;
-        this._produto = _produto;
+    constructor(codigo, data, cliente, produto) {
+        this._codigo = codigo;
+        this._data = data;
+        this._cliente = cliente;
+        this._produto = produto;
     }
     get codigo() {
         return this._codigo;
